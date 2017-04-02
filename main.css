@@ -34,6 +34,10 @@ h2 {
 	font-style: italic;
 }
 
+a {
+	color: #333;
+}
+
 body > header, body > section {
 	position: relative;
 	width: calc(100vw - 500px);
