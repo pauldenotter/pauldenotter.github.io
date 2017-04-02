@@ -1,0 +1,81 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	margin: 60px auto 0 auto;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "arial", sans-serif;
+	color: #555;
+}
+
+body > header {
+	text-align: center;
+}
+
+body > header > h1 {
+	font-weight: 100;
+	font-size: 1.8rem;
+	border-bottom: 1px solid #888;
+}
+
+.LI-profile-badge {
+	position: fixed;
+	top: 1vh;
+	right: 1vw;
+	z-index: 1;
+}
+
+h1, h2 {
+	font-weight: 100;
+}
+
+h2 {
+	font-size: 1.3em;
+	font-style: italic;
+}
+
+body > header, body > section {
+	position: relative;
+	width: calc(100vw - 500px);
+	left: calc((100vw - 250px) * .1);
+}
+
+section.skills > ul {
+	list-style: none;
+	padding: 0;
+}
+
+section.skills li {
+	display: inline;
+}
+
+section.skills li:not(:last-child):after {
+	content: ',';
+}
+
+section.experience article:nth-child(odd) div {
+	right: 0;
+}
+
+section article[data-start][data-end]:before {
+	content: attr(data-start)' - 'attr(data-end);
+	float: right;
+}
+
+@media (max-width: 900px) {
+	body > header, body > section {
+		width: 80vw;
+		left: 10vw;
+	}
+
+	.LI-profile-badge {
+		position: relative;
+		top: auto;
+		right: auto;
+	}
+
+	section article[data-start][data-end]:before {
+		font-size: 0.6rem;
+		line-height: 2rem;
+	}
+}
